@@ -23,14 +23,14 @@ if __name__ == '__main__':
 		exit(0)
 	dict_floyd = floyd(gr)
 	t3 = time.time()
-	jonson, floyd = open('johnson.txt', 'w'), open('floyd.txt', 'w')
+	johnson, floyd = open('johnson.txt', 'w'), open('floyd.txt', 'w')
 	
 	# jonson
-	jonson.write('Johnson uses : ' + str(t2 - t1) + 's' + '\n')
+	johnson.write('Johnson uses : ' + str(t2 - t1) + 's' + '\n')
 	for i in dict_johnson.keys():
 		dict_i: dict = dict_johnson[i]
 		for j in dict_i.keys():
-			jonson.write('u: ' + str(i) + ', v: ' + str(j) + ', min path: ' + str(dict_i[j]) + '\n')
+			johnson.write('u: ' + str(i) + ', v: ' + str(j) + ', min path: ' + str(dict_i[j]) + '\n')
 			
 	# floyd
 	floyd.write('Floyd uses : ' + str(t3 - t2) + 's' + '\n')

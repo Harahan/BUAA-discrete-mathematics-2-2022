@@ -76,10 +76,10 @@ class Distance:
 		return self.w == other.w
 	
 	def __lt__(self, other):
-		return self.w <= other.w
+		return self.w < other.w
 	
 	def __le__(self, other):
-		return self.w < other.w
+		return self.w <= other.w
 	
 	def __gt__(self, other):
 		return self.w > other.w
